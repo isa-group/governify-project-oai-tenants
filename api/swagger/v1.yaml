@@ -2,23 +2,11 @@
 swagger: "2.0"
 info:
   description: >-
-    A governify implementation of SLA Check from SLA4OAI specification
-    <div class="postman-run-button"
-    data-postman-action="collection/import"
-    data-postman-var-1="425bd87f1af3472673f7"
-    data-postman-param="env%5Blocal%5D=W3sia2V5Ijoic3VwZXJ2aXNvci5ob3N0IiwidmFsdWUiOiJsb2NhbGhvc3Q6NTAwMCIsInR5cGUiOiJ0ZXh0IiwiZW5hYmxlZCI6dHJ1ZSwiaG92ZXJlZCI6ZmFsc2V9LHsia2V5IjoibW9uaXRvci5ob3N0IiwidmFsdWUiOiJsb2NhbGhvc3Q6NTAwMSIsInR5cGUiOiJ0ZXh0IiwiZW5hYmxlZCI6dHJ1ZSwiaG92ZXJlZCI6ZmFsc2V9XQ==&env%5Bheroku%5D=W3sia2V5Ijoic3VwZXJ2aXNvci5ob3N0IiwidmFsdWUiOiJzdXBlcnZpc29yLm9haS5nb3Zlcm5pZnkuaW8iLCJ0eXBlIjoidGV4dCIsImVuYWJsZWQiOnRydWUsImhvdmVyZWQiOmZhbHNlfSx7ImtleSI6Im1vbml0b3IuaG9zdCIsInZhbHVlIjoibW9uaXRvci5vYWkuZ292ZXJuaWZ5LmlvIiwidHlwZSI6InRleHQiLCJlbmFibGVkIjp0cnVlLCJob3ZlcmVkIjpmYWxzZX1d"></div>
-    <script type="text/javascript">
-      (function (p,o,s,t,m,a,n) {
-        !p[s] && (p[s] = function () { (p[t] || (p[t] = [])).push(arguments); });
-        !o.getElementById(s+t) && o.getElementsByTagName("head")[0].appendChild((
-          (n = o.createElement("script")),
-          (n.id = s+t), (n.async = 1), (n.src = m), n
-        ));
-      }(window, document, "_pm", "PostmanRunObject", "https://run.pstmn.io/button.js"));
-    </script>
+    Tenant to agreement resolver. This service gives the possibility to get the
+    agreement of a tenant given
   version: "1.0.0"
   title: "Supervisor"
-  termsOfService: "http://supervisor.sla4oai.governify.io/terms/"
+  termsOfService: "http://supervisor.governify.io/terms/"
   contact:
     name: "ISA Group"
     url: "http://governify.io"
@@ -34,29 +22,22 @@ consumes:
 produces:
 - "application/json"
 paths:
-  /check:
+  /namespaces:
     post:
       tags:
-      - "check"
-      description: >-
-        The Check endpoint allows to verify the current state of the SLA
-        for a  given service and operation in context for a given scope. In the
-        essence, the service will respond true or false to notify the provider
-        if it is acceptable to fulfill the request (positive case), or on the contrary,
-        not acceptable and then, the request should be denied (negative case).
-      operationId: "checkPOST"
+      - namespaces
+      description: Create a new namespaces.
+      operationId: "namespacesPOST"
       parameters:
       - in: "body"
-        name: "requestInfo"
-        description: "Scope of the current request."
+        name: "namespace"
+        description: "Namespace that will be created."
         required: true
         schema:
-          $ref: "#/definitions/requestInfo"
+          $ref: "#/definitions/newNamespace"
       responses:
-        200:
-          description: "SLA status"
-          schema:
-            $ref: "#/definitions/slaStatus"
+        201:
+          description: "Created"
         400:
           description: "Bad request"
           schema:
@@ -69,25 +50,144 @@ paths:
           description: "Unexpected error"
           schema:
             $ref: "#/definitions/errorModel"
-      x-swagger-router-controller: "Check"
-  /tenants:
+      x-swagger-router-controller: "Namespaces"
+    get:
+      tags:
+      - namespaces
+      description: Get all namespaces
+      operationId: namespacesGET
+      responses:
+        200:
+          description: All namespaces
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/namespace'
+        400:
+          description: "Bad request"
+          schema:
+            $ref: "#/definitions/errorModel"
+        401:
+          description: "Unauthorized"
+          schema:
+            $ref: "#/definitions/errorModel"
+        default:
+          description: "Unexpected error"
+          schema:
+            $ref: "#/definitions/errorModel"
+      x-swagger-router-controller: "Namespaces"
+  /namespaces/{name}:
+    get:
+      tags:
+        - namespaces
+      description: Get a namespace with {name}
+      operationId: namespacesNameGET
+      parameters:
+        - name: name
+          in: path
+          description: Name of namespace
+          required: true
+          type: string
+      responses:
+        200:
+          description: All namespaces
+          schema:
+            $ref: '#/definitions/namespace'
+        400:
+          description: "Bad request"
+          schema:
+            $ref: "#/definitions/errorModel"
+        401:
+          description: "Unauthorized"
+          schema:
+            $ref: "#/definitions/errorModel"
+        default:
+          description: "Unexpected error"
+          schema:
+            $ref: "#/definitions/errorModel"
+      x-swagger-router-controller: "Namespaces"
+    delete:
+      tags:
+        - namespaces
+      description: Delete namespace with {name}
+      operationId: namespacesNameDELETE
+      parameters:
+        - name: name
+          in: path
+          description: Name of namespace
+          required: true
+          type: string
+      responses:
+        200:
+          description: Namespaces has been deleted
+        400:
+          description: "Bad request"
+          schema:
+            $ref: "#/definitions/errorModel"
+        401:
+          description: "Unauthorized"
+          schema:
+            $ref: "#/definitions/errorModel"
+        default:
+          description: "Unexpected error"
+          schema:
+            $ref: "#/definitions/errorModel"
+      x-swagger-router-controller: "Namespaces"
+  /{namespace}/tenants:
+    post:
+      tags:
+      - tenants
+      description: This endpoint creates a new tenant information.
+      operationId: tenantsPOST
+      parameters:
+        - name: tenant
+          in: body
+          description: Tenant that will be created
+          required: true
+          schema:
+            $ref: '#/definitions/newTenant'
+        - name: namespace
+          in: path
+          description: Namespace on new tenant will be created
+          required: true
+          type: string
+      responses:
+        200:
+          description: Tenant has been created.
+        400:
+          description: "Bad request"
+          schema:
+            $ref: "#/definitions/errorModel"
+        401:
+          description: "Unauthorized"
+          schema:
+            $ref: "#/definitions/errorModel"
+        default:
+          description: "Unexpected error"
+      x-swagger-router-controller: "Tenants"
     get:
       tags:
       - "tenants"
       description: >-
-        This endpoint returns the tenant information that is required,
-        you must pass at least one of these parameters.
+        This endpoint returns the tenant information that is required. You must
+        pass keyName and keyValue and the system returns a specific tenant
+        filtered by this keyName with this keyValue.
       operationId: "tenantsGET"
       parameters:
-      - name: "apikey"
+      - name: namespace
+        in: path
+        description: Namespace on new tenant will be created
+        required: true
+        type: string
+      - name: "keyName"
         in: "query"
-        description: "Apikey which identifies a tenant"
-        required: false
+        description: "Name of query param"
+        required: true
         type: "string"
-      - name: "account"
+      - name: "keyValue"
         in: "query"
-        description: "Account which identifies a tennat"
-        required: false
+        description: "Value of query param"
+        required: true
         type: "string"
       responses:
         200:
@@ -105,83 +205,76 @@ paths:
         default:
           description: "Unexpected error"
       x-swagger-router-controller: "Tenants"
+  /{namespace}/tenants/{id}:
+    delete:
+      tags:
+      - "tenants"
+      description: Delete tenant with tenantId = {id}
+      operationId: "tenantsIdDELETE"
+      parameters:
+      - name: id
+        in: path
+        description: "Tenant identifier"
+        required: true
+        type: "string"
+      - name: namespace
+        in: path
+        description: Namespace on new tenant will be created
+        required: true
+        type: string
+      responses:
+        200:
+          description: Tenant with {id} has been deleted
+        400:
+          description: "Bad request"
+          schema:
+            $ref: "#/definitions/errorModel"
+        401:
+          description: "Unauthorized"
+          schema:
+            $ref: "#/definitions/errorModel"
+        default:
+          description: "Unexpected error"
+      x-swagger-router-controller: "Tenants"
 definitions:
   tenant:
     type: "object"
-    required:
-    - "requestedPayload"
-    - "scope"
-    - "sla"
     properties:
-      sla:
+      _id:
+        type: string
+      agreement:
         type: "string"
       scope:
-        type: "object"
+        type: object
         properties: {}
-      requestedPayload:
-        type: "object"
-        properties: {}
-  slaStatus:
-    type: "object"
+
+  newTenant:
+    type: object
     properties:
-      accept:
-        type: "boolean"
-      quotas:
-        type: "array"
-        items:
-          $ref: "#/definitions/limit"
-      rates:
-        type: "array"
-        items:
-          $ref: "#/definitions/limit"
-      configuration:
-        type: "object"
-        properties: {}
-      requestedMetrics:
-        type: "array"
-        items:
-          type: "string"
-  requestInfo:
-    type: "object"
-    required:
-    - "requestedPayload"
-    - "scope"
-    - "sla"
-    - "ts"
-    properties:
-      sla:
-        type: "string"
-      ts:
-        type: "string"
-      resource:
-        type: "string"
-      method:
-        type: "string"
+      agreement:
+        type: string
       scope:
-        type: "object"
+        type: object
         properties: {}
-      requestedPayload:
-        type: "object"
-        properties: {}
-      environment:
-        type: "string"
-  limit:
-    type: "object"
+
+  namespace:
+    type: object
     properties:
-      resource:
-        type: "string"
-      method:
-        type: "string"
-      metrics:
-        type: "string"
-      limit:
-        type: "integer"
-        format: "int64"
-      used:
-        type: "integer"
-        format: "int64"
-      awaitTo:
-        type: "string"
+      _id:
+        type: string
+      name:
+        type: string
+      description:
+        type: string
+
+  newNamespace:
+    type: object
+    properties:
+      name:
+        type: string
+      description:
+        type: string
+
   errorModel:
     type: "object"
     required:

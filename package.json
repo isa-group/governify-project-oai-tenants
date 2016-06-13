@@ -17,6 +17,7 @@
     "body-parser": "^1.15.1",
     "cors": "^2.7.1",
     "express": "^4.13.4",
+    "firebase": "^3.0.4",
     "js-yaml": "^3.3.0",
     "swagger-tools": "0.10.1"
   }
