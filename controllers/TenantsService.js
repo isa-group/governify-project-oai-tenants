@@ -100,15 +100,20 @@ exports.tenantsIdDELETE = function(args, res, next) {
 
 function resolveTenantBy(keyName, keyValue, tenants, successCb, errorCb){
     try{
+        var tenant = null
         for(var t in tenants){
             if(tenants[t].scope[keyName]){
                 if(tenants[t].scope[keyName] === keyValue ){
                   tenants[t]._id = t;
-                  successCb(tenants[t]);
-                }else
-                  successCb(null);
-                break;
+                  tenant = tenants[t];
+                  break;
+                }
             }
+        }
+        if(tenant)
+          successCb(tenants[t]);
+        else {
+          successCb(null);
         }
     }catch(e){
         errorCb(e.toString());

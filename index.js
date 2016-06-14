@@ -8,7 +8,7 @@ var fs = require('fs');
 var bodyParser = require('body-parser');
 var cors = require('cors');
 
-var serverPort = (process.env.PORT || 5000);
+var serverPort = (process.env.PORT || 3001);
 var app = express();
 
 app.use(bodyParser.json());
