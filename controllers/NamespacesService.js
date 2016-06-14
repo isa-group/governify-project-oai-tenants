@@ -11,15 +11,21 @@ exports.namespacesPOST = function(args, res, next) {
     if(args.namespace.value.name){
         var name = args.namespace.value.name;
         var current = db.getRef('/namespaces/' + name);
-        current.set(new namespace(args.namespace.value.name, args.namespace.value.description), (error) => {
-              if(!error)
-                  res.end();
-              else {
-                res.status(500);
-                res.json(new error(500, error));
-              }
+        current.once("value", function(snap){
+            if(!snap.exists()){
+                current.set(new namespace(args.namespace.value.name, args.namespace.value.description), (error) => {
+                      if(!error)
+                          res.end();
+                      else {
+                          res.status(500);
+                          res.json(new error(500, error));
+                      }
+                });
+            }else{
+                res.status(400);
+                res.json(new error(400, "Bad request, The namespace already exists."));
+            }
         });
-
     }else{
         res.status(400);
         res.json(new error(400, "Bad request, you need to pass requestInfo in the body"));
@@ -100,6 +106,7 @@ function error (code, message){
 
 function namespace(name, description){
     this.name = name;
-    this.description = description;
+    if(description)
+      this.description = description;
     this.tenants = {};
 }
