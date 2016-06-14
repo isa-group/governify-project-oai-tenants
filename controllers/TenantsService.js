@@ -49,9 +49,12 @@ exports.tenantsPOST = function(args, res, next) {
    * parameters expected in the args:
   * tenant (newTenant)
   **/
+  console.log(args.namespace.value + "-" + args.tenant.value);
+  console.log(args.tenant.value);
   if(args.namespace.value && args.tenant.value.agreement){
       var name = args.namespace.value;
       var newTenant = args.tenant.value;
+      console.log(name + "-" + newTenant.agreement);
       var ref = db.getRef('/namespaces/' + name + '/tenants');
       ref.push().set(newTenant, (err) => {
           if(!err)
@@ -64,7 +67,7 @@ exports.tenantsPOST = function(args, res, next) {
   }else {
 
       res.status(400);
-      res.json(new error(400, "Bad request, you need to pass keyName, keyValue and namespace"));
+      res.json(new error(400, "Bad request, you need to pass namespace and newTenant"));
 
   }
 
@@ -96,15 +99,19 @@ exports.tenantsIdDELETE = function(args, res, next) {
 }
 
 function resolveTenantBy(keyName, keyValue, tenants, successCb, errorCb){
-    for(var t in tenants){
-        if(tenants[t].scope[keyName]){
-            if(tenants[t].scope[keyName] === keyValue ){
-              tenants[t]._id = t;
-              successCb(tenants[t]);
-            }else
-              successCb(null);
-            break;
+    try{
+        for(var t in tenants){
+            if(tenants[t].scope[keyName]){
+                if(tenants[t].scope[keyName] === keyValue ){
+                  tenants[t]._id = t;
+                  successCb(tenants[t]);
+                }else
+                  successCb(null);
+                break;
+            }
         }
+    }catch(e){
+        errorCb(e.toString());
     }
 }
 
