@@ -133,7 +133,7 @@ paths:
           schema:
             $ref: "#/definitions/errorModel"
       x-swagger-router-controller: "Namespaces"
-  /{namespace}/tenants:
+  /namespaces/{namespace}/tenants:
     post:
       tags:
       - tenants
@@ -205,7 +205,7 @@ paths:
         default:
           description: "Unexpected error"
       x-swagger-router-controller: "Tenants"
-  /{namespace}/tenants/{id}:
+  /namespaces/{namespace}/tenants/{id}:
     delete:
       tags:
       - "tenants"
