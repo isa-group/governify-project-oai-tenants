@@ -22,8 +22,8 @@ exports.namespacesPOST = function(args, res, next) {
                       }
                 });
             }else{
-                res.status(400);
-                res.json(new error(400, "Bad request, The namespace already exists."));
+                res.status(409);
+                res.json(new error(409, "Conflict, The namespace already exists."));
             }
         });
     }else{
