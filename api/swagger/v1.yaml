@@ -182,12 +182,12 @@ paths:
       - name: "keyName"
         in: "query"
         description: "Name of query param"
-        required: true
+        required: false
         type: "string"
       - name: "keyValue"
         in: "query"
         description: "Value of query param"
-        required: true
+        required: false
         type: "string"
       responses:
         200:

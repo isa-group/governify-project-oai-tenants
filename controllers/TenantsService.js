@@ -19,9 +19,9 @@ exports.tenantsGET = function(args, res, next) {
         ref.once('value', function(tenants){
             if(tenants.val()){
                 resolveTenantBy(keyName, keyValue, tenants.val(), (tenant) => {
-                    if(tenant)
+                    if(tenant){
                         res.json(tenant);
-                    else {
+                    }else {
                         res.status(404);
                         res.json(new error(404, "Not Found tenant with these values"));
                     }
@@ -37,8 +37,12 @@ exports.tenantsGET = function(args, res, next) {
 
     }else {
 
-        res.status(400);
-        res.json(new error(400, "Bad request, you need to pass keyName, keyValue and namespace"));
+        var name = args.namespace.value;
+        var ref = db.getRef('/namespaces/' + name + '/tenants');
+        ref.once('value', function(tenants){
+            console.log(tenants.val());
+            res.json(db.parseToArray(tenants.val()));
+        });
 
     }
 
@@ -49,21 +53,38 @@ exports.tenantsPOST = function(args, res, next) {
    * parameters expected in the args:
   * tenant (newTenant)
   **/
-  console.log(args.namespace.value + "-" + args.tenant.value);
-  console.log(args.tenant.value);
   if(args.namespace.value && args.tenant.value.agreement){
       var name = args.namespace.value;
       var newTenant = args.tenant.value;
-      console.log(name + "-" + newTenant.agreement);
-      var ref = db.getRef('/namespaces/' + name + '/tenants');
-      ref.push().set(newTenant, (err) => {
-          if(!err)
-              res.end();
-          else {
-              res.status(500);
-              res.json(new error(500, err));
+      var ref = db.getRef('/namespaces/' + name + '/tenants' );
+      ref.once('value', function(snapshot){
+          var tenant = null;
+          for(var s in newTenant.scope){
+              tenant = resolveTenantBy(s, newTenant.scope[s], snapshot.val(), ()=>{}, ()=>{});
+              if(tenant != null) break;
+          }
+          if(tenant){
+              var tenantRef = db.getRef('/namespaces/' + name + '/tenants/' + tenant._id );
+              tenantRef.set(newTenant, (err)=>{
+                  if(!err){
+                      res.end();
+                  }else {
+                      res.status(500);
+                      res.json(new error(500, err));
+                  }
+              });
+          }else{
+              ref.push().set(newTenant, (err) => {
+                  if(!err){
+                      res.end();
+                  }else {
+                      res.status(500);
+                      res.json(new error(500, err));
+                  }
+              });
           }
       });
+
   }else {
 
       res.status(400);
@@ -99,8 +120,9 @@ exports.tenantsIdDELETE = function(args, res, next) {
 }
 
 function resolveTenantBy(keyName, keyValue, tenants, successCb, errorCb){
+    var tenant = null
     try{
-        var tenant = null
+
         for(var t in tenants){
             if(tenants[t].scope[keyName]){
                 if(tenants[t].scope[keyName] === keyValue ){
@@ -118,6 +140,7 @@ function resolveTenantBy(keyName, keyValue, tenants, successCb, errorCb){
     }catch(e){
         errorCb(e.toString());
     }
+    return tenant;
 }
 
 function error (code, message){
