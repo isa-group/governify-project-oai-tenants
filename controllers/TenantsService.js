@@ -40,7 +40,6 @@ exports.tenantsGET = function(args, res, next) {
         var name = args.namespace.value;
         var ref = db.getRef('/namespaces/' + name + '/tenants');
         ref.once('value', function(tenants){
-            console.log(tenants.val());
             res.json(db.parseToArray(tenants.val()));
         });
 
