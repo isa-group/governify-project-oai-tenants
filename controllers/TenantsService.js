@@ -59,7 +59,8 @@ exports.tenantsPOST = function(args, res, next) {
       ref.once('value', function(snapshot){
           var tenant = null;
           for(var s in newTenant.scope){
-              tenant = resolveTenantBy(s, newTenant.scope[s], snapshot.val(), ()=>{}, ()=>{});
+              if(s != "tenant")
+                tenant = resolveTenantBy(s, newTenant.scope[s], snapshot.val(), ()=>{}, ()=>{});
               if(tenant != null) break;
           }
           if(tenant){
