@@ -10,18 +10,13 @@ var cors = require('cors');
 var config = require('./config')
 var logger = config.logger;
 
-var serverPort = (process.env.PORT || 3001);
+var serverPort = (config.port || 3001);
 var app = express();
 
 app.use(bodyParser.json());
 app.use(cors());
 
-app.use((req, res, next) => {
-		var requestInfo = req.method + ' => ' + req.headers['host'] + req.url + ', params: '
-		+ JSON.stringify(req.query) +  ', with:  ' + JSON.stringify(req.body);
-		logger.info(requestInfo);
-		next();
-});
+
 // swaggerRouter configuration
 var options = {
 	swaggerUi: '/swagger/v1.json',
