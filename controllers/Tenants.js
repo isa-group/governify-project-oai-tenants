@@ -17,3 +17,7 @@ module.exports.tenantsGET = function tenantsGET (req, res, next) {
 module.exports.tenantsIdDELETE = function tenantsIdDELETE (req, res, next) {
   Tenants.tenantsIdDELETE(req.swagger.params, res, next);
 };
+
+module.exports.tenantsIdPUT = function tenantsIdPUT (req, res, next) {
+  Tenants.tenantsIdPUT(req.swagger.params, res, next);
+};

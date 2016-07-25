@@ -18,8 +18,8 @@ info:
       }(window, document, "_pm", "PostmanRunObject", "https://run.pstmn.io/button.js"));
     </script>
   version: "1.0.0"
-  title: "Supervisor"
-  termsOfService: "http://supervisor.governify.io/terms/"
+  title: "Tenants"
+  termsOfService: "http://tenants.governify.io/terms/"
   contact:
     name: "ISA Group"
     url: "http://governify.io"
@@ -35,118 +35,7 @@ consumes:
 produces:
 - "application/json"
 paths:
-  /namespaces:
-    post:
-      tags:
-      - namespaces
-      description: Create a new namespaces.
-      operationId: "namespacesPOST"
-      parameters:
-      - in: "body"
-        name: "namespace"
-        description: "Namespace that will be created."
-        required: true
-        schema:
-          $ref: "#/definitions/newNamespace"
-      responses:
-        201:
-          description: "Created"
-        400:
-          description: "Bad request"
-          schema:
-            $ref: "#/definitions/errorModel"
-        401:
-          description: "Unauthorized"
-          schema:
-            $ref: "#/definitions/errorModel"
-        default:
-          description: "Unexpected error"
-          schema:
-            $ref: "#/definitions/errorModel"
-      x-swagger-router-controller: "Namespaces"
-    get:
-      tags:
-      - namespaces
-      description: Get all namespaces
-      operationId: namespacesGET
-      responses:
-        200:
-          description: All namespaces
-          schema:
-            type: array
-            items:
-              $ref: '#/definitions/namespace'
-        400:
-          description: "Bad request"
-          schema:
-            $ref: "#/definitions/errorModel"
-        401:
-          description: "Unauthorized"
-          schema:
-            $ref: "#/definitions/errorModel"
-        default:
-          description: "Unexpected error"
-          schema:
-            $ref: "#/definitions/errorModel"
-      x-swagger-router-controller: "Namespaces"
-  /namespaces/{name}:
-    get:
-      tags:
-        - namespaces
-      description: Get a namespace with {name}
-      operationId: namespacesNameGET
-      parameters:
-        - name: name
-          in: path
-          description: Name of namespace
-          required: true
-          type: string
-      responses:
-        200:
-          description: All namespaces
-          schema:
-            $ref: '#/definitions/namespace'
-        400:
-          description: "Bad request"
-          schema:
-            $ref: "#/definitions/errorModel"
-        401:
-          description: "Unauthorized"
-          schema:
-            $ref: "#/definitions/errorModel"
-        default:
-          description: "Unexpected error"
-          schema:
-            $ref: "#/definitions/errorModel"
-      x-swagger-router-controller: "Namespaces"
-    delete:
-      tags:
-        - namespaces
-      description: Delete namespace with {name}
-      operationId: namespacesNameDELETE
-      parameters:
-        - name: name
-          in: path
-          description: Name of namespace
-          required: true
-          type: string
-      responses:
-        200:
-          description: Namespaces has been deleted
-        400:
-          description: "Bad request"
-          schema:
-            $ref: "#/definitions/errorModel"
-        401:
-          description: "Unauthorized"
-          schema:
-            $ref: "#/definitions/errorModel"
-        default:
-          description: "Unexpected error"
-          schema:
-            $ref: "#/definitions/errorModel"
-      x-swagger-router-controller: "Namespaces"
-  /namespaces/{namespace}/tenants:
+  /tenants:
     post:
       tags:
       - tenants
@@ -159,11 +48,6 @@ paths:
           required: true
           schema:
             $ref: '#/definitions/newTenant'
-        - name: namespace
-          in: path
-          description: Namespace on new tenant will be created
-          required: true
-          type: string
       responses:
         200:
           description: Tenant has been created.
@@ -187,11 +71,6 @@ paths:
         filtered by this keyName with this keyValue.
       operationId: "tenantsGET"
       parameters:
-      - name: namespace
-        in: path
-        description: Namespace on new tenant will be created
-        required: true
-        type: string
       - name: "keyName"
         in: "query"
         description: "Name of query param"
@@ -218,7 +97,7 @@ paths:
         default:
           description: "Unexpected error"
       x-swagger-router-controller: "Tenants"
-  /namespaces/{namespace}/tenants/{id}:
+  /tenants/{id}:
     delete:
       tags:
       - "tenants"
@@ -230,14 +109,40 @@ paths:
         description: "Tenant identifier"
         required: true
         type: "string"
-      - name: namespace
-        in: path
-        description: Namespace on new tenant will be created
-        required: true
-        type: string
       responses:
         200:
           description: Tenant with {id} has been deleted
+        400:
+          description: "Bad request"
+          schema:
+            $ref: "#/definitions/errorModel"
+        401:
+          description: "Unauthorized"
+          schema:
+            $ref: "#/definitions/errorModel"
+        default:
+          description: "Unexpected error"
+      x-swagger-router-controller: "Tenants"
+    put:
+      tags:
+      - "tenants"
+      description: Update tenant with tenantId = {id}
+      operationId: "tenantsIdPUT"
+      parameters:
+      - name: id
+        in: path
+        description: "Tenant identifier"
+        required: true
+        type: "string"
+      - name: tenant
+        in: body
+        description: "Tenant updates"
+        required: true
+        schema:
+          $ref: '#/definitions/newTenant'
+      responses:
+        200:
+          description: Tenant with {id} has been update
         400:
           description: "Bad request"
           schema:

@@ -1,0 +1,13 @@
+---
+production:
+  services:
+    db:
+      uri: "mongodb://database:27017/tenants"
+  port: 80
+  logger: 'info'
+development:
+  services:
+    db:
+      uri: "mongodb://dockers:27017/tenants"
+  port: 5031
+  logger: 'debug'

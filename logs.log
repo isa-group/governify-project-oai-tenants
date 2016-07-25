@@ -1,0 +1,457 @@
+{"date":"Mon Jul 25 2016 13:47:19 GMT+0200 (Hora de verano romance)","process":{"pid":6496,"uid":null,"gid":null,"cwd":"C:\\Users\\isa-tecnico\\Documents\\workspaces\\governify\\supervisor","execPath":"C:\\Program Files\\nodejs\\node.exe","version":"v5.4.1","argv":["C:\\Program Files\\nodejs\\node.exe","C:\\Users\\isa-tecnico\\Documents\\workspaces\\governify\\supervisor"],"memoryUsage":{"rss":46858240,"heapTotal":33298432,"heapUsed":17548184}},"os":{"loadavg":[0,0,0],"uptime":591338.250422},"trace":[{"column":15,"file":"C:\\Users\\isa-tecnico\\Documents\\workspaces\\governify\\supervisor\\index.js","function":"","line":15,"method":null,"native":false},{"column":26,"file":"module.js","function":"Module._compile","line":397,"method":"_compile","native":false},{"column":10,"file":"module.js","function":"Object.Module._extensions..js","line":404,"method":"Module._extensions..js","native":false},{"column":32,"file":"module.js","function":"Module.load","line":343,"method":"load","native":false},{"column":12,"file":"module.js","function":"Function.Module._load","line":300,"method":"Module._load","native":false},{"column":10,"file":"module.js","function":"Function.Module.runMain","line":429,"method":"Module.runMain","native":false},{"column":18,"file":"node.js","function":"startup","line":139,"method":null,"native":false},{"column":3,"file":"node.js","function":null,"line":999,"method":null,"native":false}],"stack":["TypeError: Cannot read property 'transports' of undefined","    at Object.<anonymous> (C:\\Users\\isa-tecnico\\Documents\\workspaces\\governify\\supervisor\\index.js:15:15)","    at Module._compile (module.js:397:26)","    at Object.Module._extensions..js (module.js:404:10)","    at Module.load (module.js:343:32)","    at Function.Module._load (module.js:300:12)","    at Function.Module.runMain (module.js:429:10)","    at startup (node.js:139:18)","    at node.js:999:3"],"level":"error","message":"uncaughtException: Cannot read property 'transports' of undefined","timestamp":"2016-07-25T11:47:19.750Z"}
+{"level":"info","message":"Your server is listening on port 3001 (http://localhost:3001)","timestamp":"2016-07-25T11:56:21.020Z"}
+{"level":"info","message":"Swagger-ui is available on http://localhost:3001/docs","timestamp":"2016-07-25T11:56:21.022Z"}
+{"level":"info","message":"( database ) Connection successful.","timestamp":"2016-07-25T11:56:21.032Z"}
+2016-07-25T11:56:53.202Z - info: Your server is listening on port 3001 (http://localhost:3001)
+2016-07-25T11:56:53.204Z - info: Swagger-ui is available on http://localhost:3001/docs
+2016-07-25T11:56:53.214Z - info: ( database ) Connection successful.
+2016-07-25T11:58:25.570Z - info: Your server is listening on port 3001 (http://localhost:3001)
+2016-07-25T11:58:25.572Z - info: Swagger-ui is available on http://localhost:3001/docs
+2016-07-25T11:58:25.582Z - info: ( database ) Successful connection.
+2016-07-25T11:59:29.899Z - info: GET => localhost:3001/api/v1/docs/, params: {}, with:  {}
+2016-07-25T11:59:29.934Z - info: GET => localhost:3001/api/v1/docs/css/typography.css, params: {}, with:  {}
+2016-07-25T11:59:29.937Z - info: GET => localhost:3001/api/v1/docs/css/reset.css, params: {}, with:  {}
+2016-07-25T11:59:29.938Z - info: GET => localhost:3001/api/v1/docs/css/screen.css, params: {}, with:  {}
+2016-07-25T11:59:29.941Z - info: GET => localhost:3001/api/v1/docs/lib/jquery-1.8.0.min.js, params: {}, with:  {}
+2016-07-25T11:59:29.942Z - info: GET => localhost:3001/api/v1/docs/lib/jquery.slideto.min.js, params: {}, with:  {}
+2016-07-25T11:59:29.944Z - info: GET => localhost:3001/api/v1/docs/lib/jquery.wiggle.min.js, params: {}, with:  {}
+2016-07-25T11:59:29.944Z - info: GET => localhost:3001/api/v1/docs/lib/jquery.ba-bbq.min.js, params: {}, with:  {}
+2016-07-25T11:59:29.946Z - info: GET => localhost:3001/api/v1/docs/lib/handlebars-2.0.0.js, params: {}, with:  {}
+2016-07-25T11:59:29.946Z - info: GET => localhost:3001/api/v1/docs/lib/js-yaml.min.js, params: {}, with:  {}
+2016-07-25T11:59:29.947Z - info: GET => localhost:3001/api/v1/docs/lib/lodash.min.js, params: {}, with:  {}
+2016-07-25T11:59:29.948Z - info: GET => localhost:3001/api/v1/docs/lib/backbone-min.js, params: {}, with:  {}
+2016-07-25T11:59:29.949Z - info: GET => localhost:3001/api/v1/docs/swagger-ui.js, params: {}, with:  {}
+2016-07-25T11:59:29.950Z - info: GET => localhost:3001/api/v1/docs/lib/highlight.7.3.pack.js, params: {}, with:  {}
+2016-07-25T11:59:29.951Z - info: GET => localhost:3001/api/v1/docs/lib/jsoneditor.min.js, params: {}, with:  {}
+2016-07-25T11:59:29.951Z - info: GET => localhost:3001/api/v1/docs/lib/marked.js, params: {}, with:  {}
+2016-07-25T11:59:29.952Z - info: GET => localhost:3001/api/v1/docs/lib/swagger-oauth.js, params: {}, with:  {}
+2016-07-25T11:59:29.958Z - info: GET => localhost:3001/api/v1/docs/css/print.css, params: {}, with:  {}
+2016-07-25T11:59:30.166Z - info: GET => localhost:3001/api/v1/docs/images/logo_small.png, params: {}, with:  {}
+2016-07-25T11:59:30.167Z - info: GET => localhost:3001/api/v1/docs/fonts/DroidSans-Bold.ttf, params: {}, with:  {}
+2016-07-25T11:59:30.168Z - info: GET => localhost:3001/api/v1/docs/fonts/DroidSans.ttf, params: {}, with:  {}
+2016-07-25T11:59:30.171Z - info: HEAD => localhost:3001/api/v1/docs/, params: {}, with:  {}
+2016-07-25T11:59:30.197Z - info: GET => localhost:3001/api/v1/api-docs, params: {}, with:  {}
+2016-07-25T11:59:30.201Z - info: GET => localhost:3001/api/v1/docs/images/favicon-16x16.png, params: {}, with:  {}
+2016-07-25T11:59:30.266Z - info: GET => localhost:3001/api/v1/docs/images/favicon-32x32.png, params: {}, with:  {}
+2016-07-25T11:59:30.372Z - info: GET => localhost:3001/api/v1/docs/images/throbber.gif, params: {}, with:  {}
+2016-07-25T11:59:32.486Z - info: GET => localhost:3001/api/v1/docs/images/favicon-16x16.png, params: {}, with:  {}
+2016-07-25T11:59:35.004Z - info: GET => localhost:3001/api/v1/docs/images/favicon-16x16.png, params: {}, with:  {}
+2016-07-25T11:59:36.012Z - info: GET => localhost:3001/api/v1/docs/images/favicon-16x16.png, params: {}, with:  {}
+2016-07-25T11:59:40.848Z - info: GET => localhost:3001/api/v1/docs/images/favicon-16x16.png, params: {}, with:  {}
+2016-07-25T11:59:44.947Z - info: GET => localhost:3001/api/v1/docs/images/favicon-16x16.png, params: {}, with:  {}
+2016-07-25T11:59:46.505Z - info: GET => localhost:3001/api/v1/docs/images/favicon-16x16.png, params: {}, with:  {}
+2016-07-25T11:59:53.043Z - info: GET => localhost:3001/api/v1/docs/images/favicon-16x16.png, params: {}, with:  {}
+2016-07-25T11:59:54.127Z - info: GET => localhost:3001/api/v1/docs/images/favicon-16x16.png, params: {}, with:  {}
+2016-07-25T11:59:56.995Z - info: GET => localhost:3001/api/v1/docs/images/favicon-16x16.png, params: {}, with:  {}
+2016-07-25T11:59:58.319Z - info: GET => localhost:3001/api/v1/docs/images/favicon-16x16.png, params: {}, with:  {}
+2016-07-25T11:59:59.435Z - info: GET => localhost:3001/api/v1/docs/images/favicon-16x16.png, params: {}, with:  {}
+2016-07-25T12:00:00.144Z - info: GET => localhost:3001/api/v1/docs/images/favicon-16x16.png, params: {}, with:  {}
+2016-07-25T12:00:00.721Z - info: GET => localhost:3001/api/v1/docs/images/favicon-16x16.png, params: {}, with:  {}
+2016-07-25T12:00:02.277Z - info: GET => localhost:3001/api/v1/docs/images/favicon-16x16.png, params: {}, with:  {}
+2016-07-25T12:00:03.193Z - info: GET => localhost:3001/api/v1/docs/images/favicon-16x16.png, params: {}, with:  {}
+2016-07-25T12:00:08.024Z - info: GET => localhost:3001/api/v1/docs/images/favicon-16x16.png, params: {}, with:  {}
+2016-07-25T12:00:10.764Z - info: GET => localhost:3001/api/v1/docs/images/favicon-16x16.png, params: {}, with:  {}
+2016-07-25T12:00:11.886Z - info: GET => localhost:3001/api/v1/docs/images/favicon-16x16.png, params: {}, with:  {}
+2016-07-25T12:00:14.755Z - info: GET => localhost:3001/api/v1/docs/images/favicon-16x16.png, params: {}, with:  {}
+2016-07-25T13:03:31.347Z - info: GET => localhost:3001/api/v1/docs/images/favicon-16x16.png, params: {}, with:  {}
+2016-07-25T13:03:37.458Z - info: Your server is listening on port 3001 (http://localhost:3001/api/v1)
+2016-07-25T13:03:37.461Z - info: Swagger-ui is available on http://localhost:3001/api/v1/docs
+2016-07-25T13:03:37.470Z - info: ( database ) Successful connection.
+2016-07-25T13:03:57.130Z - info: GET => localhost:3001/api/v1/tenants?keyName=apikey&keyValue=ei4u3, params: {"keyName":"apikey","keyValue":"ei4u3"}, with:  {}
+2016-07-25T13:04:37.325Z - info: Your server is listening on port 3001 (http://localhost:3001/api/v1)
+2016-07-25T13:04:37.327Z - info: Swagger-ui is available on http://localhost:3001/api/v1/docs
+2016-07-25T13:04:37.337Z - info: ( database ) Successful connection.
+2016-07-25T13:04:38.649Z - info: GET => localhost:3001/api/v1/tenants?keyName=apikey&keyValue=ei4u3, params: {"keyName":"apikey","keyValue":"ei4u3"}, with:  {}
+2016-07-25T13:04:57.193Z - info: Your server is listening on port 3001 (http://localhost:3001/api/v1)
+2016-07-25T13:04:57.197Z - info: Swagger-ui is available on http://localhost:3001/api/v1/docs
+2016-07-25T13:04:57.209Z - info: ( database ) Successful connection.
+2016-07-25T13:04:58.512Z - info: GET => localhost:3001/api/v1/tenants?keyName=apikey&keyValue=ei4u3, params: {"keyName":"apikey","keyValue":"ei4u3"}, with:  {}
+2016-07-25T13:07:44.936Z - info: Your server is listening on port 3001 (http://localhost:3001/api/v1)
+2016-07-25T13:07:44.938Z - info: Swagger-ui is available on http://localhost:3001/api/v1/docs
+2016-07-25T13:07:44.947Z - info: ( database ) Successful connection.
+2016-07-25T13:07:48.813Z - info: GET => localhost:3001/api/v1/docs/images/favicon-16x16.png, params: {}, with:  {}
+2016-07-25T13:07:49.963Z - info: GET => localhost:3001/api/v1/docs/images/favicon-16x16.png, params: {}, with:  {}
+2016-07-25T13:08:25.635Z - info: POST => localhost:3001/api/v1/tenants, params: {}, with:  {"agreement":"string","scope":{"apikey":"ah3hrl"}}
+2016-07-25T13:08:40.227Z - info: GET => localhost:3001/api/v1/docs/images/favicon-16x16.png, params: {}, with:  {}
+2016-07-25T13:08:43.458Z - info: GET => localhost:3001/api/v1/tenants?keyName=apikey&keyValue=ah3hrl, params: {"keyName":"apikey","keyValue":"ah3hrl"}, with:  {}
+2016-07-25T13:08:52.024Z - info: GET => localhost:3001/api/v1/docs/images/favicon-16x16.png, params: {}, with:  {}
+2016-07-25T13:12:39.575Z - info: Your server is listening on port 3001 (http://localhost:3001/api/v1)
+2016-07-25T13:12:39.577Z - info: Swagger-ui is available on http://localhost:3001/api/v1/docs
+2016-07-25T13:12:39.587Z - info: ( database ) Successful connection.
+2016-07-25T13:12:44.380Z - info: POST => localhost:3001/api/v1/tenants, params: {}, with:  {"agreement":"string","scope":{"apikey":"ah3hrl"}}
+2016-07-25T13:20:29.298Z - info: Your server is listening on port 3001 (http://localhost:3001/api/v1)
+2016-07-25T13:20:29.300Z - info: Swagger-ui is available on http://localhost:3001/api/v1/docs
+2016-07-25T13:20:29.311Z - info: ( database ) Successful connection.
+2016-07-25T13:20:35.280Z - info: POST => localhost:3001/api/v1/tenants, params: {}, with:  {"agreement":"string","scope":{"apikey":"ah3hrl"}}
+2016-07-25T13:21:01.503Z - info: POST => localhost:3001/api/v1/tenants, params: {}, with:  {"agreement":"string","scope":{"apikey":"ah3hrl","name":"dartaeaga"}}
+2016-07-25T13:21:05.614Z - info: GET => localhost:3001/api/v1/docs/images/favicon-16x16.png, params: {}, with:  {}
+2016-07-25T13:21:07.183Z - info: GET => localhost:3001/api/v1/tenants?keyName=apikey&keyValue=ah3hrl, params: {"keyName":"apikey","keyValue":"ah3hrl"}, with:  {}
+2016-07-25T13:21:21.589Z - info: GET => localhost:3001/api/v1/tenants, params: {}, with:  {}
+2016-07-25T13:21:57.098Z - info: Your server is listening on port 3001 (http://localhost:3001/api/v1)
+2016-07-25T13:21:57.100Z - info: Swagger-ui is available on http://localhost:3001/api/v1/docs
+2016-07-25T13:21:57.110Z - info: ( database ) Successful connection.
+2016-07-25T13:21:59.267Z - info: GET => localhost:3001/api/v1/tenants, params: {}, with:  {}
+2016-07-25T13:22:00.863Z - info: GET => localhost:3001/api/v1/tenants, params: {}, with:  {}
+2016-07-25T13:22:16.398Z - info: GET => localhost:3001/api/v1/tenants?keyName=apikey&keyValue=ah3hrl, params: {"keyName":"apikey","keyValue":"ah3hrl"}, with:  {}
+2016-07-25T13:31:37.792Z - info: Your server is listening on port 3001 (http://localhost:3001/api/v1)
+2016-07-25T13:31:37.794Z - info: Swagger-ui is available on http://localhost:3001/api/v1/docs
+2016-07-25T13:31:37.804Z - info: ( database ) Successful connection.
+2016-07-25T13:31:45.977Z - info: GET => localhost:3001/api/v1/tenants?keyName=apikey&keyValue=ah3hrl, params: {"keyName":"apikey","keyValue":"ah3hrl"}, with:  {}
+2016-07-25T13:31:55.459Z - info: GET => localhost:3001/api/v1/tenants, params: {}, with:  {}
+2016-07-25T13:36:06.124Z - info: Your server is listening on port 3001 (http://localhost:3001/api/v1)
+2016-07-25T13:36:06.126Z - info: Swagger-ui is available on http://localhost:3001/api/v1/docs
+2016-07-25T13:36:06.136Z - info: ( database ) Successful connection.
+2016-07-25T13:36:16.238Z - info: GET => localhost:3001/api/v1/tenants, params: {}, with:  {}
+2016-07-25T13:36:28.315Z - info: GET => localhost:3001/api/v1/tenants?keyName=apikey&keyValue=ah3hrl, params: {"keyName":"apikey","keyValue":"ah3hrl"}, with:  {}
+2016-07-25T13:37:41.005Z - info: Your server is listening on port 3001 (http://localhost:3001/api/v1)
+2016-07-25T13:37:41.007Z - info: Swagger-ui is available on http://localhost:3001/api/v1/docs
+2016-07-25T13:37:41.018Z - info: ( database ) Successful connection.
+2016-07-25T13:37:42.543Z - info: GET => localhost:3001/api/v1/tenants?keyName=apikey&keyValue=ah3hrl, params: {"keyName":"apikey","keyValue":"ah3hrl"}, with:  {}
+2016-07-25T13:38:19.537Z - info: Your server is listening on port 3001 (http://localhost:3001/api/v1)
+2016-07-25T13:38:19.539Z - info: Swagger-ui is available on http://localhost:3001/api/v1/docs
+2016-07-25T13:38:19.549Z - info: ( database ) Successful connection.
+2016-07-25T13:38:20.630Z - info: GET => localhost:3001/api/v1/tenants?keyName=apikey&keyValue=ah3hrl, params: {"keyName":"apikey","keyValue":"ah3hrl"}, with:  {}
+2016-07-25T13:38:20.634Z - debug: mongodb query: {"$all":{"apikey":"ah3hrl"}}
+2016-07-25T13:39:36.600Z - info: Your server is listening on port 3001 (http://localhost:3001/api/v1)
+2016-07-25T13:39:36.602Z - info: Swagger-ui is available on http://localhost:3001/api/v1/docs
+2016-07-25T13:39:36.612Z - info: ( database ) Successful connection.
+2016-07-25T13:39:37.767Z - info: GET => localhost:3001/api/v1/tenants?keyName=apikey&keyValue=ah3hrl, params: {"keyName":"apikey","keyValue":"ah3hrl"}, with:  {}
+2016-07-25T13:39:37.771Z - debug: mongodb query: {"$all":{"apikey":"ah3hrl"}}
+2016-07-25T13:40:10.461Z - info: Your server is listening on port 3001 (http://localhost:3001/api/v1)
+2016-07-25T13:40:10.463Z - info: Swagger-ui is available on http://localhost:3001/api/v1/docs
+2016-07-25T13:40:10.473Z - info: ( database ) Successful connection.
+2016-07-25T13:40:12.207Z - info: GET => localhost:3001/api/v1/tenants?keyName=apikey&keyValue=ah3hrl, params: {"keyName":"apikey","keyValue":"ah3hrl"}, with:  {}
+2016-07-25T13:40:12.211Z - debug: mongodb query: {
+  "scope": {
+    "$all": {
+      "$all": {
+        "apikey": "ah3hrl"
+      }
+    }
+  }
+}
+2016-07-25T13:41:27.714Z - info: Your server is listening on port 3001 (http://localhost:3001/api/v1)
+2016-07-25T13:41:27.717Z - info: Swagger-ui is available on http://localhost:3001/api/v1/docs
+2016-07-25T13:41:27.727Z - info: ( database ) Successful connection.
+2016-07-25T13:41:28.718Z - info: GET => localhost:3001/api/v1/tenants?keyName=apikey&keyValue=ah3hrl, params: {"keyName":"apikey","keyValue":"ah3hrl"}, with:  {}
+2016-07-25T13:41:28.722Z - debug: mongodb query: {
+  "scope": {
+    "$all": {
+      "apikey": {
+        "$all": [
+          "ah3hrl"
+        ]
+      }
+    }
+  }
+}
+2016-07-25T13:41:53.870Z - info: Your server is listening on port 3001 (http://localhost:3001/api/v1)
+2016-07-25T13:41:53.873Z - info: Swagger-ui is available on http://localhost:3001/api/v1/docs
+2016-07-25T13:41:53.882Z - info: ( database ) Successful connection.
+2016-07-25T13:41:55.527Z - info: GET => localhost:3001/api/v1/tenants?keyName=apikey&keyValue=ah3hrl, params: {"keyName":"apikey","keyValue":"ah3hrl"}, with:  {}
+2016-07-25T13:41:55.530Z - debug: mongodb query: {
+  "scope": {
+    "$all": {
+      "apikey": {
+        "$all": [
+          "ah3hrl"
+        ]
+      }
+    }
+  }
+}
+2016-07-25T13:42:11.999Z - info: Your server is listening on port 3001 (http://localhost:3001/api/v1)
+2016-07-25T13:42:12.001Z - info: Swagger-ui is available on http://localhost:3001/api/v1/docs
+2016-07-25T13:42:12.010Z - info: ( database ) Successful connection.
+2016-07-25T13:42:12.693Z - info: GET => localhost:3001/api/v1/tenants?keyName=apikey&keyValue=ah3hrl, params: {"keyName":"apikey","keyValue":"ah3hrl"}, with:  {}
+2016-07-25T13:42:12.698Z - debug: mongodb query: {
+  "scope": {
+    "$all": {
+      "apikey": {
+        "$all": [
+          "ah3hrl"
+        ]
+      }
+    }
+  }
+}
+2016-07-25T13:47:50.434Z - info: Your server is listening on port 3001 (http://localhost:3001/api/v1)
+2016-07-25T13:47:50.436Z - info: Swagger-ui is available on http://localhost:3001/api/v1/docs
+2016-07-25T13:47:50.445Z - info: ( database ) Successful connection.
+2016-07-25T13:48:01.060Z - info: GET => localhost:3001/api/v1/tenants?keyName=apikey&keyValue=ah3hrl, params: {"keyName":"apikey","keyValue":"ah3hrl"}, with:  {}
+2016-07-25T13:48:01.064Z - debug: mongodb query: {
+  "scope.apikey": "ah3hrl"
+}
+2016-07-25T13:48:15.895Z - info: GET => localhost:3001/api/v1/tenants?keyName=name&keyValue=dartaeaga, params: {"keyName":"name","keyValue":"dartaeaga"}, with:  {}
+2016-07-25T13:48:15.896Z - debug: mongodb query: {
+  "scope.name": "dartaeaga"
+}
+2016-07-25T13:48:32.886Z - info: GET => localhost:3001/api/v1/tenants, params: {}, with:  {}
+2016-07-25T13:48:32.887Z - debug: mongodb query: {}
+2016-07-25T13:55:10.813Z - info: Your server is listening on port 3001 (http://localhost:3001/api/v1)
+2016-07-25T13:55:10.815Z - info: Swagger-ui is available on http://localhost:3001/api/v1/docs
+2016-07-25T13:55:10.825Z - info: ( database ) Successful connection.
+2016-07-25T13:55:17.004Z - info: GET => localhost:3001/api/v1/docs/images/favicon-16x16.png, params: {}, with:  {}
+2016-07-25T13:55:20.285Z - info: DELETE => localhost:3001/api/v1/tenants/5796123d42f40d102ee417c7, params: {}, with:  {}
+2016-07-25T13:55:27.172Z - info: GET => localhost:3001/api/v1/tenants, params: {}, with:  {}
+2016-07-25T13:55:27.174Z - debug: mongodb query: {}
+2016-07-25T13:55:30.388Z - info: DELETE => localhost:3001/api/v1/tenants/5796123d42f40d102ee417c7, params: {}, with:  {}
+2016-07-25T13:55:35.404Z - info: GET => localhost:3001/api/v1/tenants, params: {}, with:  {}
+2016-07-25T13:55:35.405Z - debug: mongodb query: {}
+2016-07-25T13:56:31.573Z - info: Your server is listening on port 3001 (http://localhost:3001/api/v1)
+2016-07-25T13:56:31.575Z - info: Swagger-ui is available on http://localhost:3001/api/v1/docs
+2016-07-25T13:56:31.585Z - info: ( database ) Successful connection.
+2016-07-25T13:56:35.480Z - info: DELETE => localhost:3001/api/v1/tenants/5796123d42f40d102ee417c7, params: {}, with:  {}
+2016-07-25T13:56:35.490Z - debug: remove info: {
+  "ok": 1,
+  "n": 0
+}
+2016-07-25T13:56:46.492Z - info: GET => localhost:3001/api/v1/tenants, params: {}, with:  {}
+2016-07-25T13:56:46.494Z - debug: mongodb query: {}
+2016-07-25T13:56:50.451Z - info: POST => localhost:3001/api/v1/tenants, params: {}, with:  {"agreement":"string","scope":{"apikey":"ah3hrl","name":"dartaeaga"}}
+2016-07-25T13:56:53.779Z - info: GET => localhost:3001/api/v1/tenants, params: {}, with:  {}
+2016-07-25T13:56:53.780Z - debug: mongodb query: {}
+2016-07-25T13:57:01.843Z - info: DELETE => localhost:3001/api/v1/tenants/57961aa274ca00e41e96286f, params: {}, with:  {}
+2016-07-25T13:57:01.845Z - debug: remove info: {
+  "ok": 1,
+  "n": 1
+}
+2016-07-25T13:57:07.139Z - info: DELETE => localhost:3001/api/v1/tenants/57961aa274ca00e41e9628, params: {}, with:  {}
+2016-07-25T13:57:16.499Z - info: DELETE => localhost:3001/api/v1/tenants/57961aa274ca00e41e96286f, params: {}, with:  {}
+2016-07-25T13:57:16.500Z - debug: remove info: {
+  "ok": 1,
+  "n": 0
+}
+2016-07-25T13:57:21.403Z - info: GET => localhost:3001/api/v1/tenants, params: {}, with:  {}
+2016-07-25T13:57:21.404Z - debug: mongodb query: {}
+2016-07-25T13:57:23.756Z - info: POST => localhost:3001/api/v1/tenants, params: {}, with:  {"agreement":"string","scope":{"apikey":"ah3hrl","name":"dartaeaga"}}
+2016-07-25T13:57:25.979Z - info: GET => localhost:3001/api/v1/tenants, params: {}, with:  {}
+2016-07-25T13:57:25.980Z - debug: mongodb query: {}
+2016-07-25T13:57:27.932Z - info: POST => localhost:3001/api/v1/tenants, params: {}, with:  {"agreement":"string","scope":{"apikey":"ah3hrl","name":"dartaeaga"}}
+2016-07-25T13:57:32.651Z - info: GET => localhost:3001/api/v1/tenants, params: {}, with:  {}
+2016-07-25T13:57:32.652Z - debug: mongodb query: {}
+2016-07-25T13:57:58.428Z - info: POST => localhost:3001/api/v1/tenants, params: {}, with:  {"agreement":"string","scope":{"apikey":"ah3hrl","name":"dartaeaga"}}
+2016-07-25T13:58:10.683Z - info: GET => localhost:3001/api/v1/tenants, params: {}, with:  {}
+2016-07-25T13:58:10.683Z - debug: mongodb query: {}
+2016-07-25T13:59:16.232Z - info: Your server is listening on port 3001 (http://localhost:3001/api/v1)
+2016-07-25T13:59:16.234Z - info: Swagger-ui is available on http://localhost:3001/api/v1/docs
+2016-07-25T13:59:16.245Z - info: ( database ) Successful connection.
+2016-07-25T13:59:19.007Z - info: POST => localhost:3001/api/v1/tenants, params: {}, with:  {"agreement":"string","scope":{"apikey":"ah3hrl","name":"dartaeaga"}}
+2016-07-25T13:59:19.021Z - debug: ( tenantsPOST ) findOne info: null
+2016-07-25T14:01:01.708Z - info: Your server is listening on port 3001 (http://localhost:3001/api/v1)
+2016-07-25T14:01:01.710Z - info: Swagger-ui is available on http://localhost:3001/api/v1/docs
+2016-07-25T14:01:01.720Z - info: ( database ) Successful connection.
+2016-07-25T14:01:04.085Z - info: POST => localhost:3001/api/v1/tenants, params: {}, with:  {"agreement":"string","scope":{"apikey":"ah3hrl","name":"dartaeaga"}}
+2016-07-25T14:01:04.090Z - info: ( tenantsPOST ) newTenant request: {
+  "agreement": "string",
+  "scope": {
+    "apikey": "ah3hrl",
+    "name": "dartaeaga"
+  }
+}
+2016-07-25T14:01:04.100Z - debug: ( tenantsPOST ) findOne info: null
+2016-07-25T14:01:28.259Z - info: GET => localhost:3001/api/v1/tenants, params: {}, with:  {}
+2016-07-25T14:01:28.260Z - debug: mongodb query: {}
+2016-07-25T14:10:52.548Z - info: Your server is listening on port 3001 (http://localhost:3001/api/v1)
+2016-07-25T14:10:52.550Z - info: Swagger-ui is available on http://localhost:3001/api/v1/docs
+2016-07-25T14:10:52.560Z - info: ( database ) Successful connection.
+2016-07-25T14:11:01.167Z - info: Your server is listening on port 3001 (http://localhost:3001/api/v1)
+2016-07-25T14:11:01.169Z - info: Swagger-ui is available on http://localhost:3001/api/v1/docs
+2016-07-25T14:11:01.179Z - info: ( database ) Successful connection.
+2016-07-25T14:11:04.523Z - info: POST => localhost:3001/api/v1/tenants, params: {}, with:  {"agreement":"string","scope":{"apikey":"ah3hrl","name":"dartaeaga"}}
+2016-07-25T14:11:04.529Z - info: ( tenantsPOST ) newTenant request: {
+  "agreement": "string",
+  "scope": {
+    "apikey": "ah3hrl",
+    "name": "dartaeaga"
+  }
+}
+2016-07-25T14:11:21.110Z - info: Your server is listening on port 3001 (http://localhost:3001/api/v1)
+2016-07-25T14:11:21.112Z - info: Swagger-ui is available on http://localhost:3001/api/v1/docs
+2016-07-25T14:11:21.123Z - info: ( database ) Successful connection.
+2016-07-25T14:11:22.643Z - info: POST => localhost:3001/api/v1/tenants, params: {}, with:  {"agreement":"string","scope":{"apikey":"ah3hrl","name":"dartaeaga"}}
+2016-07-25T14:11:22.648Z - info: ( tenantsPOST ) newTenant request: {
+  "agreement": "string",
+  "scope": {
+    "apikey": "ah3hrl",
+    "name": "dartaeaga"
+  }
+}
+2016-07-25T14:11:35.825Z - info: Your server is listening on port 3001 (http://localhost:3001/api/v1)
+2016-07-25T14:11:35.828Z - info: Swagger-ui is available on http://localhost:3001/api/v1/docs
+2016-07-25T14:11:35.838Z - info: ( database ) Successful connection.
+2016-07-25T14:11:36.556Z - info: POST => localhost:3001/api/v1/tenants, params: {}, with:  {"agreement":"string","scope":{"apikey":"ah3hrl","name":"dartaeaga"}}
+2016-07-25T14:11:36.561Z - info: ( tenantsPOST ) newTenant request: {
+  "agreement": "string",
+  "scope": {
+    "apikey": "ah3hrl",
+    "name": "dartaeaga"
+  }
+}
+2016-07-25T14:11:54.250Z - info: Your server is listening on port 3001 (http://localhost:3001/api/v1)
+2016-07-25T14:11:54.251Z - info: Swagger-ui is available on http://localhost:3001/api/v1/docs
+2016-07-25T14:11:54.261Z - info: ( database ) Successful connection.
+2016-07-25T14:11:55.787Z - info: POST => localhost:3001/api/v1/tenants, params: {}, with:  {"agreement":"string","scope":{"apikey":"ah3hrl","name":"dartaeaga"}}
+2016-07-25T14:11:55.791Z - info: ( tenantsPOST ) newTenant request: {
+  "agreement": "string",
+  "scope": {
+    "apikey": "ah3hrl",
+    "name": "dartaeaga"
+  }
+}
+2016-07-25T14:12:03.601Z - info: POST => localhost:3001/api/v1/tenants, params: {}, with:  {"agreement":"string","scope":{"apikey":"ah3hrl","name":"darteaga"}}
+2016-07-25T14:12:03.603Z - info: ( tenantsPOST ) newTenant request: {
+  "agreement": "string",
+  "scope": {
+    "apikey": "ah3hrl",
+    "name": "darteaga"
+  }
+}
+2016-07-25T14:12:03.605Z - debug: ( tenantsPOST ) findOne info: null
+2016-07-25T14:12:41.042Z - info: Your server is listening on port 3001 (http://localhost:3001/api/v1)
+2016-07-25T14:12:41.044Z - info: Swagger-ui is available on http://localhost:3001/api/v1/docs
+2016-07-25T14:12:41.054Z - info: ( database ) Successful connection.
+2016-07-25T14:12:43.207Z - info: POST => localhost:3001/api/v1/tenants, params: {}, with:  {"agreement":"string","scope":{"apikey":"ah3hrl","name":"darteaga"}}
+2016-07-25T14:12:43.212Z - info: ( tenantsPOST ) newTenant request: {
+  "agreement": "string",
+  "scope": {
+    "apikey": "ah3hrl",
+    "name": "darteaga"
+  }
+}
+2016-07-25T14:12:43.223Z - debug: ( tenantsPOST ) findOne info: {
+  "_id": "57961e33b6ce19302191364d",
+  "agreement": "string",
+  "scope": {
+    "apikey": "ah3hrl",
+    "name": "darteaga"
+  }
+}
+2016-07-25T14:14:26.152Z - info: POST => localhost:3001/api/v1/tenants, params: {}, with:  {"agreement":"string","scope":{"apikey":"ah3hrl","account":"darteaga@us.es","tenant":"us.es"}}
+2016-07-25T14:14:26.154Z - info: ( tenantsPOST ) newTenant request: {
+  "agreement": "string",
+  "scope": {
+    "apikey": "ah3hrl",
+    "account": "darteaga@us.es",
+    "tenant": "us.es"
+  }
+}
+2016-07-25T14:14:26.157Z - debug: ( tenantsPOST ) findOne info: null
+2016-07-25T14:14:30.920Z - info: GET => localhost:3001/api/v1/tenants, params: {}, with:  {}
+2016-07-25T14:14:30.921Z - debug: mongodb query: {}
+2016-07-25T14:15:47.349Z - info: GET => localhost:3001/api/v1/docs/images/favicon-16x16.png, params: {}, with:  {}
+2016-07-25T14:15:48.307Z - info: GET => localhost:3001/api/v1/docs/images/favicon-16x16.png, params: {}, with:  {}
+2016-07-25T14:15:49.267Z - info: GET => localhost:3001/api/v1/docs/images/favicon-16x16.png, params: {}, with:  {}
+2016-07-25T14:15:50.880Z - info: GET => localhost:3001/api/v1/docs/images/favicon-16x16.png, params: {}, with:  {}
+2016-07-25T14:15:52.576Z - info: GET => localhost:3001/api/v1/docs/images/favicon-16x16.png, params: {}, with:  {}
+2016-07-25T14:15:55.132Z - info: GET => localhost:3001/api/v1/docs/images/favicon-16x16.png, params: {}, with:  {}
+2016-07-25T14:15:59.822Z - info: GET => localhost:3001/api/v1/docs/images/favicon-16x16.png, params: {}, with:  {}
+2016-07-25T14:16:03.925Z - info: GET => localhost:3001/api/v1/docs/images/favicon-16x16.png, params: {}, with:  {}
+2016-07-25T14:21:57.303Z - info: Your server is listening on port 3001 (http://localhost:3001/api/v1)
+2016-07-25T14:21:57.305Z - info: Swagger-ui is available on http://localhost:3001/api/v1/docs
+2016-07-25T14:21:57.314Z - info: ( database ) Successful connection.
+2016-07-25T14:22:05.408Z - info: PUT => localhost:3001/api/v1/tenants/57961aa274ca00e41e96286f, params: {}, with:  {"agreement":"xxx","scope":{"apikey":"ah3hrl","account":"darteaga@us.es","tenant":"us.es"}}
+2016-07-25T14:22:05.422Z - debug: update info: {
+  "ok": 1,
+  "nModified": 0,
+  "n": 1,
+  "upserted": [
+    {
+      "index": 0,
+      "_id": "57961aa274ca00e41e96286f"
+    }
+  ]
+}
+2016-07-25T14:23:06.830Z - info: PUT => localhost:3001/api/v1/tenants/57961aa274ca00e41e96286f, params: {}, with:  {"agreement":"xxx2","scope":{"apikey":"ah3hrl","account":"darteaga@us.es","tenant":"us.es"}}
+2016-07-25T14:23:06.834Z - debug: update info: {
+  "ok": 1,
+  "nModified": 1,
+  "n": 1
+}
+2016-07-25T14:25:27.449Z - info: Your server is listening on port 3001 (http://localhost:3001/api/v1)
+2016-07-25T14:25:27.451Z - info: Swagger-ui is available on http://localhost:3001/api/v1/docs
+2016-07-25T14:25:27.460Z - info: ( database ) Successful connection.
+2016-07-25T14:25:30.374Z - info: GET => localhost:3001/api/v1/docs/images/favicon-16x16.png, params: {}, with:  {}
+2016-07-25T14:25:31.397Z - info: GET => localhost:3001/api/v1/docs/images/favicon-16x16.png, params: {}, with:  {}
+2016-07-25T14:25:36.858Z - info: POST => localhost:3001/api/v1/tenants, params: {}, with:  {"agreement":"strindfdg","scope":{"apikey":"ah3hrl","account":"darteaga@us.es","tenant":"us.es"}}
+2016-07-25T14:25:36.864Z - info: ( tenantsPOST ) newTenant request: {
+  "agreement": "strindfdg",
+  "scope": {
+    "apikey": "ah3hrl",
+    "account": "darteaga@us.es",
+    "tenant": "us.es"
+  }
+}
+2016-07-25T14:25:36.875Z - debug: ( tenantsPOST ) findOne info: {
+  "_id": "57961ec2d438a284270a7ab1",
+  "agreement": "string",
+  "scope": {
+    "apikey": "ah3hrl",
+    "account": "darteaga@us.es",
+    "tenant": "us.es"
+  }
+}
+2016-07-25T14:25:45.468Z - info: POST => localhost:3001/api/v1/tenants, params: {}, with:  {"agreement":"strindfdg","scope":{"apikey":"ah3hrls","account":"darteaga@us.es","tenant":"us.es"}}
+2016-07-25T14:25:45.470Z - info: ( tenantsPOST ) newTenant request: {
+  "agreement": "strindfdg",
+  "scope": {
+    "apikey": "ah3hrls",
+    "account": "darteaga@us.es",
+    "tenant": "us.es"
+  }
+}
+2016-07-25T14:25:45.472Z - debug: ( tenantsPOST ) findOne info: null
+2016-07-25T14:25:53.792Z - info: GET => localhost:3001/api/v1/docs/images/favicon-16x16.png, params: {}, with:  {}
+2016-07-25T14:25:57.709Z - info: GET => localhost:3001/api/v1/docs/images/favicon-16x16.png, params: {}, with:  {}
+2016-07-25T14:26:00.531Z - info: GET => localhost:3001/api/v1/tenants, params: {}, with:  {}
+2016-07-25T14:26:00.533Z - info: ( tenantsGET ) GET tenant request: 
+2016-07-25T14:26:00.534Z - debug: mongodb query: {}
+2016-07-25T14:26:22.925Z - info: GET => localhost:3001/api/v1/tenants?keyName=account&keyValue=darteaga%40us.es, params: {"keyName":"account","keyValue":"darteaga@us.es"}, with:  {}
+2016-07-25T14:26:22.926Z - info: ( tenantsGET ) GET tenant request: 
+2016-07-25T14:26:22.926Z - debug: mongodb query: {
+  "scope.account": "darteaga@us.es"
+}
+2016-07-25T14:26:37.739Z - info: GET => localhost:3001/api/v1/docs/images/favicon-16x16.png, params: {}, with:  {}
+2016-07-25T14:26:41.308Z - info: DELETE => localhost:3001/api/v1/tenants/579621696e6cdb6819e27cab, params: {}, with:  {}
+2016-07-25T14:26:41.308Z - info: ( tenantsIdDELETE ) delete tenant request: "579621696e6cdb6819e27cab"
+2016-07-25T14:26:41.311Z - debug: remove info: {
+  "ok": 1,
+  "n": 1
+}
+2016-07-25T14:26:44.027Z - info: GET => localhost:3001/api/v1/docs/images/favicon-16x16.png, params: {}, with:  {}
+2016-07-25T14:26:45.311Z - info: GET => localhost:3001/api/v1/docs/images/favicon-16x16.png, params: {}, with:  {}
+2016-07-25T14:26:57.508Z - info: PUT => localhost:3001/api/v1/tenants/57961aa274ca00e41e96286f, params: {}, with:  {"agreement":"xxx22","scope":{"apikey":"ah3hrl","account":"darteaga@us.es","tenant":"us.es"}}
+2016-07-25T14:26:57.510Z - info: ( tenantsIdPUT ) update tenant request: "57961aa274ca00e41e96286f"
+2016-07-25T14:26:57.514Z - debug: update info: {
+  "ok": 1,
+  "nModified": 1,
+  "n": 1
+}
+2016-07-25T14:28:57.938Z - info: GET => localhost:3001/api/v1/docs/images/favicon-16x16.png, params: {}, with:  {}
+2016-07-25T14:28:59.023Z - info: GET => localhost:3001/api/v1/docs/images/favicon-16x16.png, params: {}, with:  {}
+2016-07-25T14:29:02.090Z - info: GET => localhost:3001/api/v1/docs/, params: {}, with:  {}
+2016-07-25T14:29:02.127Z - info: GET => localhost:3001/api/v1/docs/css/typography.css, params: {}, with:  {}
+2016-07-25T14:29:02.129Z - info: GET => localhost:3001/api/v1/docs/css/reset.css, params: {}, with:  {}
+2016-07-25T14:29:02.134Z - info: GET => localhost:3001/api/v1/docs/lib/jquery-1.8.0.min.js, params: {}, with:  {}
+2016-07-25T14:29:02.135Z - info: GET => localhost:3001/api/v1/docs/lib/jquery.slideto.min.js, params: {}, with:  {}
+2016-07-25T14:29:02.136Z - info: GET => localhost:3001/api/v1/docs/css/screen.css, params: {}, with:  {}
+2016-07-25T14:29:02.138Z - info: GET => localhost:3001/api/v1/docs/lib/jquery.wiggle.min.js, params: {}, with:  {}
+2016-07-25T14:29:02.138Z - info: GET => localhost:3001/api/v1/docs/lib/jquery.ba-bbq.min.js, params: {}, with:  {}
+2016-07-25T14:29:02.140Z - info: GET => localhost:3001/api/v1/docs/lib/js-yaml.min.js, params: {}, with:  {}
+2016-07-25T14:29:02.140Z - info: GET => localhost:3001/api/v1/docs/lib/handlebars-2.0.0.js, params: {}, with:  {}
+2016-07-25T14:29:02.141Z - info: GET => localhost:3001/api/v1/docs/lib/lodash.min.js, params: {}, with:  {}
+2016-07-25T14:29:02.141Z - info: GET => localhost:3001/api/v1/docs/lib/backbone-min.js, params: {}, with:  {}
+2016-07-25T14:29:02.142Z - info: GET => localhost:3001/api/v1/docs/swagger-ui.js, params: {}, with:  {}
+2016-07-25T14:29:02.143Z - info: GET => localhost:3001/api/v1/docs/lib/highlight.7.3.pack.js, params: {}, with:  {}
+2016-07-25T14:29:02.146Z - info: GET => localhost:3001/api/v1/docs/lib/jsoneditor.min.js, params: {}, with:  {}
+2016-07-25T14:29:02.147Z - info: GET => localhost:3001/api/v1/docs/lib/marked.js, params: {}, with:  {}
+2016-07-25T14:29:02.149Z - info: GET => localhost:3001/api/v1/docs/lib/swagger-oauth.js, params: {}, with:  {}
+2016-07-25T14:29:02.155Z - info: GET => localhost:3001/api/v1/docs/css/print.css, params: {}, with:  {}
+2016-07-25T14:29:02.362Z - info: GET => localhost:3001/api/v1/docs/images/logo_small.png, params: {}, with:  {}
+2016-07-25T14:29:02.363Z - info: GET => localhost:3001/api/v1/docs/fonts/DroidSans-Bold.ttf, params: {}, with:  {}
+2016-07-25T14:29:02.364Z - info: GET => localhost:3001/api/v1/docs/fonts/DroidSans.ttf, params: {}, with:  {}
+2016-07-25T14:29:02.367Z - info: HEAD => localhost:3001/api/v1/docs/, params: {}, with:  {}
+2016-07-25T14:29:02.401Z - info: GET => localhost:3001/api/v1/api-docs, params: {}, with:  {}
+2016-07-25T14:29:02.409Z - info: GET => localhost:3001/api/v1/docs/images/favicon-16x16.png, params: {}, with:  {}
+2016-07-25T14:29:02.475Z - info: GET => localhost:3001/api/v1/docs/images/favicon-32x32.png, params: {}, with:  {}
+2016-07-25T14:29:04.114Z - info: GET => localhost:3001/api/v1/docs/images/favicon-16x16.png, params: {}, with:  {}

@@ -7,11 +7,11 @@ var jsyaml = require('js-yaml');
 var fs = require('fs');
 var bodyParser = require('body-parser');
 var cors = require('cors');
-var logger = require('winston');
+var config = require('./config')
+var logger = config.logger;
 
 var serverPort = (process.env.PORT || 3001);
 var app = express();
-logger.default.transports.console.timestamp = true;
 
 app.use(bodyParser.json());
 app.use(cors());
@@ -52,7 +52,7 @@ swaggerTools.initializeMiddleware(swaggerDoc, function (middleware) {
 
 	// Start the server
 	app.listen(serverPort, function () {
-		console.log('Your server is listening on port %d (http://localhost:%d)', serverPort, serverPort);
-		console.log('Swagger-ui is available on http://localhost:%d/docs', serverPort);
+		logger.info('Your server is listening on port %d (http://localhost:%d/api/v1)', serverPort, serverPort);
+		logger.info('Swagger-ui is available on http://localhost:%d/api/v1/docs', serverPort);
 	});
 });
