@@ -39,6 +39,7 @@ exports.tenantsPOST = function(args, res, next) {
   logger.info("( tenantsPOST ) newTenant request: " + JSON.stringify(newTenant, null, 2));
 
   var query = {};
+  query["agreement"] = newTenant.agreement;
   for (var s in newTenant.scope){
       query[ "scope." + s ] = newTenant.scope[s];
   }
