@@ -4,7 +4,7 @@ production:
     db:
       uri: "mongodb://mongo:27017/tenants"
   port: 80
-  logger: 'debug'
+  logger: 'info'
 development:
   services:
     db:
