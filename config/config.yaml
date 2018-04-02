@@ -2,12 +2,12 @@
 production:
   services:
     db:
-      uri: "mongodb://database:27017/tenants"
+      uri: "mongodb://mongo:27017/tenants"
   port: 80
-  logger: 'info'
+  logger: 'debug'
 development:
   services:
     db:
-      uri: "mongodb://dockers:27017/tenants"
+      uri: "mongodb://localhost:27017/tenants"
   port: 5031
   logger: 'debug'
