@@ -11,6 +11,7 @@ module.exports.db = db;
 module.exports.db.connect = function (done) {
     mongoose.connection.on('error', (err) => {
         logger.info("( database ) Connection error.");
+        done("( database ) Connection error.");
     });
 
     mongoose.connection.on('open', () => {

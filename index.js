@@ -46,11 +46,16 @@ swaggerTools.initializeMiddleware(swaggerDoc, function (middleware) {
 		swaggerUi: swaggerDoc.basePath + '/docs'
 	}));
 	// Connect to mongodb
-	data.db.connect(function () {
+	data.db.connect(function (err) {
 		// Start the server
-		app.listen(serverPort, function () {
-			logger.info('Your server is listening on port %d (http://localhost:%d/api/v1)', serverPort, serverPort);
-			logger.info('Swagger-ui is available on http://localhost:%d/api/v1/docs', serverPort);
-		});
+		if (err) {
+			logger.info("Cannot establish a connection with MonngoDB. Exiting now.");
+			process.exit(0);
+		} else {
+			app.listen(serverPort, function () {
+				logger.info('Your server is listening on port %d (http://localhost:%d/api/v1)', serverPort, serverPort);
+				logger.info('Swagger-ui is available on http://localhost:%d/api/v1/docs', serverPort);
+			});
+		}
 	});
 });
